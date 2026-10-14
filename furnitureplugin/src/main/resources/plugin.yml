@@ -1,0 +1,19 @@
+name: FurniturePlugin
+version: '1.0.0'
+main: com.example.furnitureplugin.FurniturePlugin
+api-version: '1.21'
+author: Claude
+description: Cross-play custom furniture (Java + Bedrock via Geyser/Floodgate)
+softdepend: [floodgate, Geyser-Spigot]
+commands:
+  furniture:
+    description: Open the furniture catalog / manage furniture
+    aliases: [fn, furn]
+    usage: /furniture [give|remove|reload] [id]
+permissions:
+  furnitureplugin.use:
+    description: Can open the furniture GUI and place furniture
+    default: true
+  furnitureplugin.admin:
+    description: Can reload config and give furniture to others
+    default: op

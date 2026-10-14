@@ -1,0 +1,31 @@
+# FurniturePlugin configuration
+
+resource-pack:
+  # Embedded HTTP server that hosts the Java resource pack zip so it can be
+  # auto-delivered to joining players without any external file host.
+  # The port must be reachable by your players (forward it if behind NAT).
+  enabled: true
+  bind-address: '0.0.0.0'
+  port: 25566
+  # Public address players' clients will fetch the pack from.
+  # If left blank, the plugin uses the server's detected public IP + port above.
+  public-url: ''
+  force-accept: true   # true = players who decline/fail are disconnected with a message
+  prompt-message: '&6This server uses custom 3D furniture models. Please accept the resource pack to see them correctly.'
+
+bedrock:
+  # Whether to send Bedrock (Floodgate) players a different, Bedrock-specific
+  # resource pack via Geyser's own pack folder instead of the Java pack above.
+  # Geyser auto-applies any valid .mcpack placed in its own packs/ directory,
+  # so this plugin does not push that pack itself -- see BEDROCK_SETUP.md.
+  enabled: true
+  representation: 'armorstand-item'  # reliable mode confirmed in this build
+
+furniture:
+  definitions-file: 'furniture-defs.yml'
+  max-placed-per-chunk: 60
+  remove-drops-item: true
+
+gui:
+  rows-per-page: 4
+  items-per-page: 36  # 4 rows x 9, minus nav row
