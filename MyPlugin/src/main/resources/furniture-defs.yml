@@ -1,0 +1,260 @@
+# Furniture catalog.
+# base-item: the vanilla item used as the carrier for the custom model
+#            (PAPER is used for flat/held-friendly carriers; custom-model-data
+#            on it is overridden by the resource pack's item model).
+# model: path (without extension) to the Java model, under
+#        assets/furnitureplugin/models/item/
+# bedrock-geometry: identifier used in the Bedrock attachable file for this piece
+# placement: FLOOR | WALL | TABLETOP
+# size: approximate footprint in blocks, used for placement collision checks
+# rotatable: whether players can cycle 4/8-step yaw with the rotate key
+
+categories:
+  CHRISTMAS:
+    display-name: '&c&lChristmas'
+    icon: PRESENT  # falls back to a vanilla icon in the GUI if not resolvable
+    items:
+      - id: christmas_tree_large
+        display-name: '&2Decorated Christmas Tree'
+        base-item: PAPER
+        custom-model-data: 100001
+        model: christmas/tree_large
+        bedrock-geometry: geo.furnitureplugin.tree_large
+        placement: FLOOR
+        size: [1, 3, 1]
+        rotatable: true
+
+      - id: christmas_tree_small
+        display-name: '&2Tabletop Christmas Tree'
+        base-item: PAPER
+        custom-model-data: 100002
+        model: christmas/tree_small
+        bedrock-geometry: geo.furnitureplugin.tree_small
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+
+      - id: present_red
+        display-name: '&cWrapped Present (Red & Gold)'
+        base-item: PAPER
+        custom-model-data: 100003
+        model: christmas/present_red
+        bedrock-geometry: geo.furnitureplugin.present_red
+        placement: FLOOR
+        size: [1, 1, 1]
+        rotatable: true
+
+      - id: present_stack_gold
+        display-name: '&6Stacked Presents (Gold & Green)'
+        base-item: PAPER
+        custom-model-data: 100004
+        model: christmas/present_stack_gold
+        bedrock-geometry: geo.furnitureplugin.present_stack_gold
+        placement: FLOOR
+        size: [1, 1, 1]
+        rotatable: true
+
+      - id: wreath
+        display-name: '&2Holly Wreath'
+        base-item: PAPER
+        custom-model-data: 100005
+        model: christmas/wreath
+        bedrock-geometry: geo.furnitureplugin.wreath
+        placement: WALL
+        size: [1, 1, 1]
+        rotatable: false
+
+      - id: garland
+        display-name: '&2Pine Garland'
+        base-item: PAPER
+        custom-model-data: 100006
+        model: christmas/garland
+        bedrock-geometry: geo.furnitureplugin.garland
+        placement: WALL
+        size: [1, 1, 1]
+        rotatable: false
+
+      - id: string_lights
+        display-name: '&eFestive String Lights'
+        base-item: PAPER
+        custom-model-data: 100007
+        model: christmas/string_lights
+        bedrock-geometry: geo.furnitureplugin.string_lights
+        placement: WALL
+        size: [1, 1, 1]
+        rotatable: false
+
+      - id: stocking
+        display-name: '&cKnit Stocking'
+        base-item: PAPER
+        custom-model-data: 100008
+        model: christmas/stocking
+        bedrock-geometry: geo.furnitureplugin.stocking
+        placement: WALL
+        size: [1, 1, 1]
+        rotatable: false
+
+      - id: fireplace_cozy
+        display-name: '&6Cozy Fireplace'
+        base-item: PAPER
+        custom-model-data: 100009
+        model: christmas/fireplace
+        bedrock-geometry: geo.furnitureplugin.fireplace
+        placement: FLOOR
+        size: [2, 2, 1]
+        rotatable: true
+
+      - id: armchair_festive
+        display-name: '&4Festive Armchair'
+        base-item: PAPER
+        custom-model-data: 100010
+        model: christmas/armchair
+        bedrock-geometry: geo.furnitureplugin.armchair
+        placement: FLOOR
+        size: [1, 1, 1]
+        rotatable: true
+
+      - id: dining_table_festive
+        display-name: '&fFestive Dining Table'
+        base-item: PAPER
+        custom-model-data: 100011
+        model: christmas/dining_table
+        bedrock-geometry: geo.furnitureplugin.dining_table
+        placement: FLOOR
+        size: [2, 1, 1]
+        rotatable: true
+
+      - id: gingerbread_house
+        display-name: '&6Gingerbread House'
+        base-item: PAPER
+        custom-model-data: 100012
+        model: christmas/gingerbread_house
+        bedrock-geometry: geo.furnitureplugin.gingerbread_house
+        placement: FLOOR
+        size: [2, 2, 2]
+        rotatable: true
+
+      - id: snow_globe
+        display-name: '&bSnow Globe'
+        base-item: PAPER
+        custom-model-data: 100013
+        model: christmas/snow_globe
+        bedrock-geometry: geo.furnitureplugin.snow_globe
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+
+      - id: candy_cane_pole
+        display-name: '&cCandy Cane Pole'
+        base-item: PAPER
+        custom-model-data: 100014
+        model: christmas/candy_cane
+        bedrock-geometry: geo.furnitureplugin.candy_cane
+        placement: FLOOR
+        size: [1, 2, 1]
+        rotatable: false
+
+      - id: snowy_lamp_post
+        display-name: '&fSnowy Lamp Post'
+        base-item: PAPER
+        custom-model-data: 100015
+        model: christmas/lamp_post
+        bedrock-geometry: geo.furnitureplugin.lamp_post
+        placement: FLOOR
+        size: [1, 2, 1]
+        rotatable: false
+
+      # Added from a user-supplied community texture pack (hand-drawn mug art
+      # by the original "ChristmasPack" creator, credited in
+      # CREDITS_ChristmasPack_by_Futureazoo.txt in the resource pack).
+      - id: mug_snowman
+        display-name: '&fSnowman Holiday Mug'
+        base-item: PAPER
+        custom-model-data: 100016
+        model: christmas/mug_snowman
+        bedrock-geometry: geo.furnitureplugin.mug_snowman
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+      - id: mug_candycane
+        display-name: '&cCandy Cane Holiday Mug'
+        base-item: PAPER
+        custom-model-data: 100017
+        model: christmas/mug_candycane
+        bedrock-geometry: geo.furnitureplugin.mug_candycane
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+      - id: mug_gingerbread
+        display-name: '&6Gingerbread Holiday Mug'
+        base-item: PAPER
+        custom-model-data: 100018
+        model: christmas/mug_gingerbread
+        bedrock-geometry: geo.furnitureplugin.mug_gingerbread
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+      - id: mug_present
+        display-name: '&2Present Holiday Mug'
+        base-item: PAPER
+        custom-model-data: 100019
+        model: christmas/mug_present
+        bedrock-geometry: geo.furnitureplugin.mug_present
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+      - id: mug_snowflake
+        display-name: '&bSnowflake Holiday Mug'
+        base-item: PAPER
+        custom-model-data: 100020
+        model: christmas/mug_snowflake
+        bedrock-geometry: geo.furnitureplugin.mug_snowflake
+        placement: TABLETOP
+        size: [1, 1, 1]
+        rotatable: true
+
+  # --- Scaffolded for future batches: empty until populated ---
+  EVERYDAY:
+    display-name: '&f&lEveryday'
+    icon: OAK_DOOR
+    items: []
+  MODERN_LUXURY:
+    display-name: '&b&lModern & Luxury'
+    icon: DIAMOND
+    items: []
+  HALLOWEEN:
+    display-name: '&6&lHalloween'
+    icon: JACK_O_LANTERN
+    items: []
+  EASTER:
+    display-name: '&d&lEaster'
+    icon: EGG
+    items: []
+  BIRTHDAY:
+    display-name: '&e&lBirthday'
+    icon: CAKE
+    items: []
+  MEDIEVAL:
+    display-name: '&7&lMedieval'
+    icon: SHIELD
+    items: []
+  JAPANESE:
+    display-name: '&c&lJapanese'
+    icon: CHERRY_SAPLING
+    items: []
+  GARDEN:
+    display-name: '&a&lGarden'
+    icon: FERN
+    items: []
+  RESTAURANT:
+    display-name: '&6&lRestaurant'
+    icon: COOKED_BEEF
+    items: []
+  SCHOOL:
+    display-name: '&9&lSchool'
+    icon: BOOK
+    items: []
+  CAFE:
+    display-name: '&e&lCafe'
+    icon: COFFEE_BEANS # falls back if item doesn't exist in this version
+    items: []

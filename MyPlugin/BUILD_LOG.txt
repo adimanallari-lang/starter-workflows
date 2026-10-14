@@ -1,0 +1,19 @@
+Build attempt log (this sandbox), 2026-10-14
+=============================================
+
+$ mvn -o package
+ERROR: Plugin org.apache.maven.plugins:maven-resources-plugin:2.6 ... could not be resolved:
+Cannot access central (https://repo.maven.apache.org/maven2) in offline mode.
+
+$ mvn package   (online attempt)
+Downloading from central: https://repo.maven.apache.org/maven2/.../maven-resources-plugin-2.6.pom
+ERROR: Unknown host repo.maven.apache.org: Name or service not known
+
+Conclusion: this execution environment's network allow-list does not include
+repo.maven.apache.org or repo.papermc.io, so Maven cannot resolve even basic
+build plugins, let alone the Paper API / Floodgate API dependencies. The
+project was therefore NOT compiled here. Source files passed a raw
+brace/parenthesis balance check (no mismatches across any .java file), which
+catches gross syntax slips but is not a substitute for an actual compile.
+Run ./build.sh on a machine with normal internet access to produce and
+verify the real jar.
