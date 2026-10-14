@@ -1,0 +1,33 @@
+
+name: Build Minecraft Plugin JAR
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'MyPlugin/**'
+      - '.github/workflows/build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Build plugin
+        run: mvn -f MyPlugin/pom.xml package
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Minecraft-Plugin-JAR
+          path: MyPlugin/target/*.jar
